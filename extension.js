@@ -6,7 +6,7 @@ import {ArchUpToDateIndicator} from './lib/ui/indicator.js';
 export default class ArchUpToDateExtension extends Extension {
     enable() {
         this._settings = this.getSettings();
-        this._indicator = new ArchUpToDateIndicator(this);
+        this._indicator = new ArchUpToDateIndicator(this, this._settings);
 
         const box = this._settings.get_string('panel-box');
         const index = this._settings.get_int('panel-index');

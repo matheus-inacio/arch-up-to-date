@@ -1,4 +1,17 @@
 /* Top bar indicator — matches gnome-shell-extension-appindicator spacing */
+.panel-button.arch-uptodate-indicator .system-status-icon {
+    padding: 0;
+}
+
+.panel-button.arch-uptodate-indicator.compact {
+    -natural-hpadding: 10px;
+}
+
+.panel-button.arch-uptodate-indicator.compact .system-status-icon {
+    padding: 0;
+    margin: 0;
+}
+
 .panel-button.arch-uptodate-indicator .arch-uptodate-panel-label {
     font-size: 85%;
     font-weight: 600;

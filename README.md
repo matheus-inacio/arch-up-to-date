@@ -96,6 +96,7 @@ arch-up-to-date/
     ├── common/                   # Shared utilities
     │   ├── debug.js              # Timing and diagnostic logger
     │   ├── format.js             # Text & time formatting helpers
+    │   ├── paths.js              # XDG state/log path helpers
     │   ├── sources.js            # Source metadata, ordering, and package URLs
     │   ├── subprocess.js         # Buffered & streaming subprocess helpers
     │   └── timer.js              # Reusable one-shot GLib timeout wrapper
