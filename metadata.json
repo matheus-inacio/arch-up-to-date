@@ -1,0 +1,10 @@
+{
+  "uuid": "arch-up-to-date@matheus-inacio.com",
+  "name": "Arch Up To Date",
+  "description": "Fast, native GNOME 51 update indicator and updater for Arch Linux (Pacman, AUR, Flatpak, and Gearlever) with auto-detection, live progress, and native authentication.",
+  "shell-version": [
+    "51"
+  ],
+  "settings-schema": "org.gnome.shell.extensions.arch-up-to-date",
+  "version": 1
+}

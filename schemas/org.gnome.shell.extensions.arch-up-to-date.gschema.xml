@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.arch-up-to-date" path="/org/gnome/shell/extensions/arch-up-to-date/">
+    <!-- Sources -->
+    <key name="enable-pacman" type="b">
+      <default>true</default>
+      <summary>Check official Arch repositories</summary>
+      <description>Use checkupdates (pacman-contrib) to check official Arch Linux repositories.</description>
+    </key>
+    <key name="aur-helper" type="s">
+      <default>'auto'</default>
+      <summary>AUR helper</summary>
+      <description>Which AUR helper to use: auto, yay, paru, or disabled.</description>
+    </key>
+    <key name="enable-flatpak" type="b">
+      <default>true</default>
+      <summary>Check Flatpak updates</summary>
+      <description>Check and apply updates for installed Flatpak applications and runtimes.</description>
+    </key>
+    <key name="enable-gearlever" type="b">
+      <default>true</default>
+      <summary>Check Gearlever AppImage updates</summary>
+      <description>Check and apply updates for AppImages managed by Gearlever.</description>
+    </key>
+
+    <!-- Behavior -->
+    <key name="check-interval" type="i">
+      <default>60</default>
+      <range min="5" max="1440"/>
+      <summary>Check interval (minutes)</summary>
+      <description>Interval in minutes between automatic update checks.</description>
+    </key>
+    <key name="boot-delay" type="i">
+      <default>15</default>
+      <range min="0" max="300"/>
+      <summary>Startup delay (seconds)</summary>
+      <description>Seconds to wait after enabling before running the first check.</description>
+    </key>
+    <key name="watch-pacman-db" type="b">
+      <default>true</default>
+      <summary>Watch pacman database</summary>
+      <description>Automatically re-check updates when /var/lib/pacman/local changes.</description>
+    </key>
+    <key name="notify-updates" type="b">
+      <default>true</default>
+      <summary>Notify on new updates</summary>
+      <description>Show a desktop notification when new updates are found or an update completes.</description>
+    </key>
+
+    <!-- Appearance -->
+    <key name="compact-mode" type="b">
+      <default>true</default>
+      <summary>Compact top bar indicator</summary>
+      <description>Use compact spacing and sizing in the top bar.</description>
+    </key>
+    <key name="show-count" type="b">
+      <default>true</default>
+      <summary>Show update count</summary>
+      <description>Display the number of pending updates next to the top bar icon.</description>
+    </key>
+    <key name="hide-when-uptodate" type="b">
+      <default>true</default>
+      <summary>Hide when up to date</summary>
+      <description>Hide the top bar icon when there are no pending updates.</description>
+    </key>
+    <key name="use-arch-icons" type="b">
+      <default>true</default>
+      <summary>Use Arch Linux symbolic icons</summary>
+      <description>Use bundled Arch Linux symbolic icons instead of generic system icons.</description>
+    </key>
+    <key name="panel-box" type="s">
+      <default>'right'</default>
+      <summary>Panel position</summary>
+      <description>Top bar box where the indicator is placed: left, center, or right.</description>
+    </key>
+    <key name="panel-index" type="i">
+      <default>0</default>
+      <range min="0" max="20"/>
+      <summary>Panel index</summary>
+      <description>Position index inside the chosen panel box.</description>
+    </key>
+
+    <!-- Developer -->
+    <key name="debug-mode" type="b">
+      <default>false</default>
+      <summary>Debug &amp; performance diagnostics</summary>
+      <description>Log detailed backend timings, subprocess diagnostics, and show a perf bar in the popup menu.</description>
+    </key>
+  </schema>
+</schemalist>

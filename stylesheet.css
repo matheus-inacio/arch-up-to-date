@@ -1,0 +1,208 @@
+/* Top bar indicator — matches gnome-shell-extension-appindicator spacing */
+.panel-button.arch-uptodate-indicator .arch-uptodate-panel-label {
+    font-size: 85%;
+    font-weight: 600;
+}
+
+.panel-button.arch-uptodate-indicator.compact .arch-uptodate-panel-label {
+    font-size: 80%;
+    font-weight: 600;
+}
+
+/* Popup menu container */
+.arch-uptodate-menu {
+    min-width: 340px;
+    max-width: 440px;
+}
+
+/* Header */
+.arch-uptodate-header-item {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.arch-uptodate-header-title {
+    font-weight: 700;
+    font-size: 1.05em;
+}
+
+.arch-uptodate-header-subtitle {
+    font-size: 0.82em;
+    opacity: 0.7;
+    margin-top: 2px;
+}
+
+.arch-uptodate-header-actions {
+    spacing: 6px;
+    margin-left: 12px;
+}
+
+.arch-uptodate-header-spinner {
+    margin-right: 2px;
+}
+
+.arch-uptodate-icon-btn {
+    border-radius: 99px;
+    padding: 6px;
+}
+
+.arch-uptodate-icon-btn-icon {
+    icon-size: 16px;
+}
+
+/* Debug diagnostics strip */
+.arch-uptodate-debug-item {
+    padding-top: 0;
+    padding-bottom: 6px;
+}
+
+.arch-uptodate-debug-text {
+    font-family: monospace;
+    font-size: 0.76em;
+    opacity: 0.85;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background-color: rgba(120, 174, 237, 0.14);
+}
+
+/* Progress card */
+.arch-uptodate-progress-box {
+    spacing: 8px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.arch-uptodate-progress-stage {
+    font-weight: 600;
+    font-size: 0.92em;
+}
+
+.arch-uptodate-progress-pct {
+    font-weight: 600;
+    font-size: 0.88em;
+    opacity: 0.8;
+}
+
+.arch-uptodate-bar {
+    height: 10px;
+    -barlevel-height: 6px;
+}
+
+.arch-uptodate-progress-detail {
+    font-size: 0.82em;
+    opacity: 0.75;
+}
+
+.arch-uptodate-progress-controls {
+    spacing: 8px;
+    margin-top: 2px;
+}
+
+.arch-uptodate-small-btn {
+    padding: 4px 10px;
+    font-size: 0.84em;
+    border-radius: 8px;
+}
+
+.arch-uptodate-log-scroll {
+    max-height: 170px;
+    margin-top: 4px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.arch-uptodate-log-container {
+    padding: 8px;
+}
+
+.arch-uptodate-log-text {
+    font-family: monospace;
+    font-size: 0.78em;
+    opacity: 0.9;
+}
+
+/* Error banner */
+.arch-uptodate-error-text {
+    font-size: 0.85em;
+    color: #ff7b63;
+    padding: 4px 0;
+}
+
+/* Grouped update list */
+.arch-uptodate-list-item {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.arch-uptodate-list-scroll {
+    max-height: 320px;
+}
+
+.arch-uptodate-list-box {
+    spacing: 2px;
+    padding-right: 6px;
+}
+
+.arch-uptodate-group-header {
+    spacing: 6px;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    padding: 2px 4px;
+}
+
+.arch-uptodate-group-header:first-child {
+    margin-top: 2px;
+}
+
+.arch-uptodate-group-icon {
+    icon-size: 14px;
+    opacity: 0.75;
+}
+
+.arch-uptodate-group-title {
+    font-size: 0.82em;
+    font-weight: 700;
+    opacity: 0.75;
+}
+
+.arch-uptodate-pkg-row {
+    padding: 5px 8px;
+    border-radius: 8px;
+}
+
+.arch-uptodate-pkg-row:hover,
+.arch-uptodate-pkg-row:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.arch-uptodate-pkg-name {
+    font-size: 0.9em;
+    padding-right: 12px;
+}
+
+.arch-uptodate-pkg-ver {
+    font-size: 0.78em;
+    opacity: 0.65;
+}
+
+/* Footer */
+.arch-uptodate-footer-item {
+    padding-top: 6px;
+    padding-bottom: 8px;
+}
+
+.arch-uptodate-update-btn {
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* Auth modal */
+.arch-uptodate-password-row {
+    spacing: 8px;
+}
+
+.arch-uptodate-auth-spinner {
+    margin-left: 4px;
+}

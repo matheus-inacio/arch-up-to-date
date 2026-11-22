@@ -1,0 +1,25 @@
+# Compiled GSettings schemas
+schemas/gschemas.compiled
+
+# Compiled gettext translations
+*.mo
+
+# Packaged GNOME Shell extension bundles
+*.shell-extension.zip
+*.zip
+
+# Build & tooling directories
+build/
+_build/
+dist/
+node_modules/
+.eslintcache
+
+# Editor & OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
