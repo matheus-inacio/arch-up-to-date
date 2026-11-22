@@ -98,3 +98,7 @@ arch-up-to-date/
     ├── passwordDialog.js   # Native GNOME Shell sudo password dialog
     └── debug.js            # Timing and diagnostic logger
 ```
+
+## License
+
+Licensed under the [GNU General Public License v3.0 or later](LICENSE) (`GPL-3.0-or-later`).
