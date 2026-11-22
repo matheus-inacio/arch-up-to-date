@@ -86,17 +86,60 @@ journalctl -f /usr/bin/gnome-shell | grep arch-up-to-date
 
 ```text
 arch-up-to-date/
-├── extension.js            # Top bar indicator, popup menu, progress UI, database watcher
-├── prefs.js                # Libadwaita preferences window
-├── metadata.json           # Extension metadata (GNOME Shell 51)
-├── stylesheet.css          # GNOME Shell styling
-├── icons/                  # Bundled Arch Linux symbolic SVG icons
-├── schemas/                # GSettings XML schema
+├── extension.js                  # Extension lifecycle & panel placement
+├── prefs.js                      # Libadwaita preferences entry point
+├── metadata.json                 # Extension metadata (GNOME Shell 51)
+├── stylesheet.css                # GNOME Shell styling
+├── icons/                        # Bundled Arch Linux symbolic SVG icons
+├── schemas/                      # GSettings XML schema
 └── lib/
-    ├── backends.js         # Backend auto-detection and parallel update checks
-    ├── updater.js          # Update runner and ephemeral Unix socket askpass
-    ├── passwordDialog.js   # Native GNOME Shell sudo password dialog
-    └── debug.js            # Timing and diagnostic logger
+    ├── common/                   # Shared utilities
+    │   ├── debug.js              # Timing and diagnostic logger
+    │   ├── format.js             # Text & time formatting helpers
+    │   ├── sources.js            # Source metadata, ordering, and package URLs
+    │   ├── subprocess.js         # Buffered & streaming subprocess helpers
+    │   └── timer.js              # Reusable one-shot GLib timeout wrapper
+    ├── backends/                 # Backend discovery & update checks
+    │   ├── detect.js             # Fast PATH/stat backend auto-detection
+    │   ├── parse.js              # Shared CLI output parsers
+    │   ├── pacman.js             # Pacman (checkupdates) check
+    │   ├── aur.js                # AUR (yay/paru) check
+    │   ├── flatpak.js            # Flatpak check
+    │   ├── gearlever.js          # Gearlever (AppImage) check
+    │   └── checker.js            # Parallel check orchestrator
+    ├── auth/                     # Privilege elevation
+    │   ├── sudo.js               # Passwordless check & stdin password validation
+    │   └── passwordDialog.js     # Native GNOME Shell sudo password modal
+    ├── updater/                  # Update execution pipeline
+    │   ├── askpass.js            # Ephemeral Unix-socket SUDO_ASKPASS server
+    │   ├── runner.js             # Ordered multi-stage update runner
+    │   └── stages/
+    │       ├── flatpak.js        # Flatpak update stage
+    │       ├── gearlever.js      # Gearlever AppImage update stage
+    │       └── arch.js           # Pacman/AUR upgrade stage & progress tracker
+    ├── core/                     # UI-independent state & orchestration
+    │   ├── scheduler.js          # Boot, periodic, and post-update check timers
+    │   ├── pacmanWatcher.js      # Debounced /var/lib/pacman/local watcher
+    │   └── updateManager.js      # Central state machine & event emitter
+    ├── ui/                       # GNOME Shell top bar & popup UI
+    │   ├── icons.js              # Arch/system symbolic icon resolver
+    │   ├── panelStatus.js        # Top bar icon, badge, and visibility
+    │   ├── notifier.js           # Desktop notifications
+    │   ├── indicator.js          # PanelMenu.Button wiring manager to UI widgets
+    │   └── menu/
+    │       ├── widgets.js        # Shared popup menu widget factories
+    │       ├── header.js         # Status title, spinner, refresh & settings buttons
+    │       ├── debugStrip.js     # Debug timing summary strip
+    │       ├── progressCard.js   # Progress bar, cancel/dismiss, and live log
+    │       ├── errorBanner.js    # Non-fatal backend warnings banner
+    │       ├── updateList.js     # Scrollable, source-grouped update list
+    │       └── footer.js         # "Update All" action bar
+    └── prefs/                    # Preferences UI groups
+        ├── rows.js               # Bound Adw row & group factories
+        ├── sourcesGroup.js       # Update sources preferences group
+        ├── behaviorGroup.js      # Scheduling, watcher & notifications group
+        ├── appearanceGroup.js    # Top bar & appearance group
+        └── developerGroup.js     # Debug diagnostics group
 ```
 
 ## License
