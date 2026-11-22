@@ -46,6 +46,11 @@
       <summary>Notify on new updates</summary>
       <description>Show a desktop notification when new updates are found or an update completes.</description>
     </key>
+    <key name="save-update-log" type="b">
+      <default>false</default>
+      <summary>Save latest update log</summary>
+      <description>Write the full output of the most recent update run to ~/.local/state/arch-up-to-date@matheus-inacio.com/last-update.log for auditing.</description>
+    </key>
 
     <!-- Appearance -->
     <key name="compact-mode" type="b">

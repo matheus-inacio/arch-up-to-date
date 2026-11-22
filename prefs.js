@@ -17,7 +17,7 @@ export default class ArchUpToDatePreferences extends ExtensionPreferences {
             icon_name: 'software-update-available-symbolic',
         });
         page.add(buildSourcesGroup(settings, detectBackends(settings)));
-        page.add(buildBehaviorGroup(settings));
+        page.add(buildBehaviorGroup(settings, this.uuid));
         page.add(buildAppearanceGroup(settings));
         page.add(buildDeveloperGroup(settings));
         window.add(page);
