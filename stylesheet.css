@@ -24,8 +24,9 @@
 
 /* Popup menu container */
 .arch-uptodate-menu {
-    min-width: 340px;
-    max-width: 440px;
+    width: 380px;
+    min-width: 380px;
+    max-width: 380px;
 }
 
 /* Header */
@@ -51,6 +52,8 @@
 }
 
 .arch-uptodate-header-spinner {
+    width: 16px;
+    height: 16px;
     margin-right: 2px;
 }
 
